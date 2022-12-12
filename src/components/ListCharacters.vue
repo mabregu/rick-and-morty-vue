@@ -1,9 +1,7 @@
 <template>
     <section>
         <div class="characters">
-            <div class="characters__item">
-                <CardCharacter v-for="character in characters" :key="character.id" :character="character" />
-            </div>
+            <CardCharacter v-for="character in characters" :key="character.id" :character="character" />
         </div>
     </section>
 </template>
@@ -33,3 +31,12 @@ export default {
 }
 
 </script>
+
+<style lang="scss">    
+    .characters {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+</style>
