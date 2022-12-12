@@ -1,17 +1,20 @@
 <template>
   <div class="container">
     <h1>Rick and Morty</h1>
+    <FilterByStatus />
     <ListCharacters />
   </div>
 </template>
 
 <script>
 import ListCharacters from './components/ListCharacters.vue'
+import FilterByStatus from './components/FilterByStatus.vue'
 
 export default {
   name: 'App',
   components: {
-    ListCharacters
+    ListCharacters,
+    FilterByStatus
   }
 }
 </script>

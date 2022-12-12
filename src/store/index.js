@@ -25,6 +25,14 @@ export default createStore({
       } catch (error) {
         console.error(error);
       }
+    },
+    filterByStatus({ commit, state }, status) {
+      if (status === 'all') {
+        commit('setCharactersFiltered', state.characters);
+        return;
+      }
+      const filtered = state.characters.filter(character => character.status === status);
+      commit('setCharactersFiltered', filtered);
     }
   },
   modules: {
